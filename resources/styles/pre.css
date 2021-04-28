@@ -1,0 +1,124 @@
+html {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+}
+
+div.back {
+  background-image: url("../images/background/title_screen.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background: rgba(42, 43, 42, 0.7);
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 30%;
+  border-radius: .5rem;
+  padding: 2rem;
+  background-color: #E6E6E9;
+}
+
+header div.after {
+  text-align: center;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div.after h2 {
+  color: #2A2B2A;
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+header div.before {
+  text-align: center;
+}
+
+header div.before h2 {
+  color: #2A2B2A;
+  line-height: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+header div.before a {
+  text-decoration: none;
+  margin-top: .5rem;
+  padding: 1rem;
+  border-radius: .2rem;
+  background: #2A2B2A;
+  color: #E6E6E9;
+  width: 60%;
+  font-weight: 400;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+}
+
+header div.before a:hover {
+  background: #ff8c61;
+}
+
+@media only screen and (max-width: 1220px) {
+  header div.before {
+    display: none;
+  }
+  header div.after {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+/*# sourceMappingURL=pre.css.map */

@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <title>Mind Dungeon | "Te encuentras en el calabozo"</title>
+</head>
+<body>
+    <div id="back">
+        <header>
+
+            <div id="soul"></div>
+            <div id="soul-after"></div>
+
+            <div id="gameover-1">
+                <div id="end-text">
+                    <h3>Te has quedado sin energia...</h3>
+                    <p><i>"No logras escuchar, ver, ni sentir. <br>Has dejado de existir."</i></p>
+                    <br>
+                    <button onclick="window.location.reload()">Volver a intentar</button>
+                </div>
+            </div>
+
+            <div id="final-box">
+                <div id="scores">
+                    <h2>¡Felicidades, <span id="us-name">jugador</span>!</h2>
+                    <p>Has logrado escapar del calabozo, y has traido luz a este &#x1F31F;</p>
+                    <h3>Puntaje:</h3>
+                    <p>Has logrado conseguir: <span id="score-got">0</span> puntos</p>
+                    <p>Nivel de energia obtenido: <span id="energy-got">0</span></p>
+                </div>
+            </div>
+
+            <div id="score-table">
+                <div id="scores">
+                    <h3>Puntaje:</h3>
+                    <p>Has logrado conseguir: <span id="score-got-1">0</span> puntos</p>
+                    <p>Nivel de energia obtenido: <span id="energy-got-1">0</span></p>
+                    <button id="continue">Continuar</button>
+                </div>
+            </div>
+
+            <div id="gameover-2">
+                <div id="scores">
+                    <h3>Fin del juego</h3>
+                    <p>Parece que no has logrado conseguir la cantidad necesaria de puntos y niveles de energia.</p>
+                    <p><i>"El silencio de la oscuridad consume la poca luz que queda en tu alma..."</i></p>
+                    <p>La esperanza de volver a ver la luz te da la fuerza suficiente para volver a intentarlo.</p>
+                    <button id="continue-2" onclick="window.location.reload()">Volver a intentar</button>
+                </div>
+            </div>
+
+            <div id="title">
+                <h1>Mind Dungeon</h1>
+                <h2>Un paseo a traves de tu <span>calabozo mental.<span></h2>
+            </div>
+            <audio src="./resources/sounds/start.mp3" id="start-sound"></audio>
+            <a href="#" id="start" class="start-button" onclick="document.getElementById('start-sound').play()">Comenzar</a>
+        </header>
+
+        <!-- Dialog -->
+
+        <div id="dialog-1">
+            <div id="text-b-1">
+                <p>Bienvenido. Justo ahora, te encuentras en un lugar, donde la luz ha dejado de existir. Sin ella, probablemente, jamas encuentres la salida de este calabozo...</p>
+            </div>
+        </div>
+
+        <div id="dialog-2">
+            <div id="text-b-2">
+                <p>Soy el amo de la luz en este sitio, yo decido cuando puedes ver, y cuando no. Cuando puedes vivir, y cuando no.</p>
+            </div>
+        </div>
+
+        <div id="dialog-3">
+            <div id="text-b-3">
+                <p>No obstante, estas de suerte, pues tengo un problema. Yo mismo he perdido mi capacidad para producir luz...</p>
+            </div>
+        </div>
+
+        <div id="dialog-4">
+            <div id="text-b-4">
+                <p>Es por ello que te ofrecere un trato. Es realmente simple, asi que no debes preocuparte.</p>
+            </div>
+        </div>
+
+        <div id="dialog-5">
+            <div id="text-b-5">
+                <p>Mi energia proviene de mi habilidad cerebral, sin embargo, aqui abajo hay muy poco para hacer, por lo cual no puedo practicar tan amenudo...</p>
+            </div>
+        </div>
+
+        <div id="dialog-6">
+            <div id="text-b-6">
+                <p>Por tal razon, dare parte de mi energia restante a ti, que vienes de la superficie. Con esta, tendras la oportunidad de concluir uno de mis juegos favoritos, lo llamo, decifra la palabra.</p>
+            </div>
+        </div>
+
+        <div id="dialog-7">
+            <div id="text-b-7">
+                <p>¿Estas de acuerdo con ello?</p>
+            </div>
+        </div>
+
+        <div id="question-1">
+            <div id="options-1">
+                <a href="#" id="yes-1">Si.</a>
+                <a href="#" id="no-1">No.</a>
+            </div>
+        </div>
+
+        <div id="yes-diag-1">
+            <div id="text-b-8">
+                <p>Perfecto. Entonces podemos comenzar. Esto dolera solo un poco...</p>
+            </div>
+        </div>
+
+        <div id="yes-diag-2">
+            <div id="text-b-8">
+                <p>Solo bromeo, esto te va a doler.</p>
+            </div>
+        </div>
+
+        <div id="adventure-diag-1">
+            <div id="text-b-8">
+                <p>Ahora, posees parte de mi energia luminica. Probablemente no puedas ver mucho, pero servira.</p>
+            </div>
+        </div>
+
+        <div id="adventure-diag-2">
+            <div id="text-b-8">
+                <p>Muy bien, es hora de jugar. Te explicare rapidamente las reglas del juego, asi que presta mucha atencion. No las volvere a explicar... Quizas.</p>
+            </div>
+        </div>
+
+        <div id="adventure-diag-3">
+            <div id="text-b-8">
+                <p>Hay codigos ocultos en el escenario. Cada codigo es simplemente varias letras desorganiadas. Organizalas para obtener una palabra.</p>
+            </div>
+        </div>
+
+        <div id="adventure-diag-4">
+            <div id="text-b-8">
+                <p>Cada palabra esta seguida por un espacio donde deberas ingresar dicha palabra.</p>
+            </div>
+        </div>
+
+        <div id="adventure-diag-5">
+            <div id="text-b-8">
+                <p>Si es correcta, tu luz incrementara. Si es erronea... Nos quedaremos sumergidos en la oscuridad, por siempre...</p>
+            </div>
+        </div>
+
+        <div id="adventure-diag-6">
+            <div id="text-b-8">
+                <p>Cuento contigo ¡Es hora de atrapar esas palabras!</p>
+            </div>
+        </div>
+
+        <!-- Tutorial -->
+
+        <div id="instruction-1">
+            <p>Mueve el raton para iluminar el escenario y encontrar objetivos ocultos.  <img id="mouse-ic" src="./resources/images/icons/mouse-icon.png" alt="mouse-icon" /></p>
+        </div>
+
+        <div id="instruction-2">
+            <p>Encuentra la caja y haz click sobre ella para continuar.</p>
+        </div>
+
+        <div id="box-test"></div>
+
+        <!-- Score Bar and Light Lever -->
+
+        <div id="score-box">
+            <p id="score-bar">Puntaje: <span id="score">0</span></p>
+        </div>
+
+        <div id="energy-box">
+            <p id="energy-bar">Nivel de energia: <span id="energy">2</span></p>
+        </div>
+
+        <div id="instruction-3">
+            <p>Tendras 120 segundos para conseguir al menos 1500 puntos y obtener un nivel de energia mayor o igual a 5.</p>
+        </div>
+
+        <div id="instruction-4">
+            <p>Las barras de ingreso de palabra seran verdes, unicamente cuando la palabra sea correcta.<br>Recuerda ingresar las palabras unicamente en minusculas.</p>
+        </div>
+
+        <div id="instruction-5">
+            <p>¿Deseas leer las instrucciones nuevamente?</p>
+        </div>
+
+        <div id="question-2">
+            <div id="options-2">
+                <a href="#" id="yes-2">Si.</a>
+                <a href="#" id="no-2">No.</a>
+            </div>
+        </div>
+
+        <div id="instruction-rep">
+            <p>Hay codigos ocultos en el escenario. Cuando los encuentres, estos se iluminaran.</p>
+            <p>Los codigos son simplemente un conjunto de palabras desorganizadas con numeros.</p>
+            <p>Encuentra la palabra oculta, e ingresala en el campo de escritura junto a esta.</p>
+        </div>
+
+        <div id="ready-text">
+            <p>¿Estas listo/a?</p>
+        </div>
+
+        <div id="ready-box">
+            <div id="options-3">
+                <a href="#" id="ready-button" onclick="document.getElementById('game-starts').play()">Comenzar</a>
+            </div>
+        </div>
+
+        <!-- Ending Dialog -->
+
+        <div id="ending-1">
+            <p>De repente, comienzas a sentir a una luz crecer en lo profundo de tu alma.</p>
+        </div>
+
+        <div id="ending-2">
+            <p>Miras a tu alrededor. Tu mente comienza a perderse entre la belleza del panorama.</p>
+        </div>
+
+
+        <div id="ending-3">
+            <p>A la distancia, logras ver la salida del calabozo.</p>
+        </div>
+
+        <div id="ending-4">
+            <p>Escuchas la voz de alguien detras de ti.</p>
+        </div>
+
+        <div id="ending-diag-1">
+            <div id="text-b-8">
+                <p>Oye, se me ha olvidado agradecerte, por regresar la luz a este sitio... <br>Habian pasado años desde la ultima vez que lucia asi de brillante.</p>
+            </div>
+        </div>
+
+        <div id="ending-diag-2">
+            <div id="text-b-8">
+                <p>Por cierto, ¿Podrias decirme tu nombre?</p>
+            </div>
+        </div>
+
+        <div id="ending-diag-3">
+            <div id="text-b-8">
+                <p>Muchas gracias, <span id="u-name">amigo/a.</span></p>
+            </div>
+        </div>
+
+        <div id="namebox">
+            <div id="text-button">
+                <input type="text" name="p-name" id="player-name-box" placeholder="Su nombre">
+                <button id="name-click" onclick="goodBye()">></button>
+            </div>
+        </div>
+
+        <!-- First Minigame -->
+
+        <!-- Count -->
+
+        <div id="start-count-1">
+            <p>¿Preparado/a?</p>
+        </div>
+
+        <div id="start-count-2">
+            <p>3</p>
+        </div>
+
+        <div id="start-count-3">
+            <p>2</p>
+        </div>
+
+        <div id="start-count-4">
+            <p>1</p>
+        </div>
+
+        <!-- Words Codes -->
+
+        <div id="hiddenwords">
+            <div id="hidden-word-1">
+                <p>a5l#man%e$ia</p>
+                <input type="text" name="hidden-1" id="hidden-w-1">
+                <button id="try-1" onclick="firstBoxClicked()">></button>
+            </div>
+
+            <div id="hidden-word-8">
+                <p>$2i"b{2bl#$m@o!p$e1si</p>
+                <input type="text" name="hidden-8" id="hidden-w-8">
+                <button id="try-8" onclick="eighthBoxClicked()">></button>
+            </div>
+    
+            <div id="hidden-word-2">
+                <p>i%nos$2d#o%auri</p>
+                <input type="text" name="hidden-2" id="hidden-w-2">
+                <button id="try-2" onclick="secondBoxClicked()">></button>
+            </div>
+
+            <div id="hidden-word-9">
+                <p>fu%g"n!ar$e!tr!"c·e¡21i</p>
+                <input type="text" name="hidden-9" id="hidden-w-9">
+                <button id="try-9" onclick="ninthBoxClicked()">></button>
+            </div>
+    
+            <div id="hidden-word-3">
+                <p>le&12pa@!lo$@1ra</p>
+                <input type="text" name="hidden-3" id="hidden-w-3">
+                <button id="try-3" onclick="thirdBoxClicked()">></button>
+            </div>
+
+            <div id="hidden-word-10">
+                <p>r#i$pu$#1c;i|ar!f</p>
+                <input type="text" name="hidden-10" id="hidden-w-10">
+                <button id="try-10" onclick="tenthBoxClicked()">></button>
+            </div>
+    
+            <div id="hidden-word-4">
+                <p>%23u*ver#!sid$ni!@3ad</p>
+                <input type="text" name="hidden-4" id="hidden-w-4">
+                <button id="try-4" onclick="fourthBoxClicked()">></button>
+            </div>
+
+            <div id="hidden-word-11">
+                <p>$e!r,l!j!$09o1</p>
+                <input type="text" name="hidden-11" id="hidden-w-11">
+                <button id="try-11" onclick="eleventhBoxClicked()">></button>
+            </div>
+    
+            <div id="hidden-word-5">
+                <p>mp#4dim$@i$en+to@e@3ren</p>
+                <input type="text" name="hidden-5" id="hidden-w-5">
+                <button id="try-5" onclick="fifthBoxClicked()">></button>
+            </div>
+
+            <div id="hidden-word-12">
+                <p>n1l3+_+\b!@#et!i12$o/</p>
+                <input type="text" name="hidden-12" id="hidden-w-12">
+                <button id="try-12" onclick="twelfthBoxClicked()">></button>
+            </div>
+    
+            <div id="hidden-word-6">
+                <p>di#$c$ta$#d$fi&ul</p>
+                <input type="text" name="hidden-6" id="hidden-w-6">
+                <button id="try-6" onclick="sixthBoxClicked()">></button>
+            </div>
+    
+            <div id="hidden-word-7">
+                <p>ha#ex@to~us</p>
+                <input type="text" name="hidden-7" id="hidden-w-7">
+                <button id="try-7" onclick="seventhBoxClicked()">></button>
+            </div>
+        </div>
+
+            <!-- GAME OVER Screens -->
+
+        <div id="no-diag-1">
+            <div id="text-b-9">
+                <p>Bueno, has lo que quieras...</p>
+            </div>
+        </div>
+
+        <div id="game-over-1">
+            <div id="text-end">
+                <h2>Fin del juego</h2>
+                <p><i>"Parece que eres una persona de poca curiosidad."</i></p>
+                <p>Para volver a intentar, refresca la pagina.</p>
+            </div>
+        </div>
+
+        <!-- Sounds -->
+
+        <audio src="./resources/sounds/power.mp3" id="power-tran"></audio>
+        <audio src="./resources/sounds/game-1-starts.wav" id="game-starts"></audio>
+        <audio src="./resources/sounds/completed-box.wav" id="game-completed-win"></audio>
+        <audio src="./resources/sounds/game-over.wav" id="game-completed-lose"></audio>
+        <audio src="./resources/sounds/soul-grow.wav" id="soul-grow"></audio>
+        <audio src="./resources/sounds/soundtrack-1.mp3" id="soundtrack-1"></audio>
+        <audio src="./resources/sounds/soundtrack-2.mp3" id="soundtrack-2"></audio>
+
+        <!-- Energy Level -->
+        
+        <div id="energy-pointer"></div>
+</body>
+<script src="./resources/scripts/scripts.js"></script>
+</html>
